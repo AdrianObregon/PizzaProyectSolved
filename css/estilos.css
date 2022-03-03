@@ -1,0 +1,754 @@
+/*Variables*/
+:root{
+    --color-primario: #FCB03B;
+    --color-secundario: #E92F3D;
+    --color-background-sombra:#E92F3D30;
+    --color-background: #EFF6F5;
+    --color-texto: #A1A5A6;
+    --text-defualt:'Open Sans';
+    
+}
+
+
+
+/*Generales*/
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--text-defualt);
+}
+html
+{
+    scroll-behavior: smooth;
+}
+
+body
+{   
+    background: var(--color-background);
+}
+
+.titulos
+{
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+.subtitulos
+{
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-primario)
+}
+.btn
+{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    color:#FFF;
+    background: var(--color-primario);
+    font-weight: 700;
+    padding: 15px 30px;
+    outline: none;
+    border: 2px solid var(--color-primario);
+    cursor: pointer;
+
+    position:relative;
+    top: 20px;
+    transition: all 0.3s;
+}
+.btn span
+{
+    padding-left:10px;
+}
+.btn:hover
+{
+    padding: 15px 45px ;
+}
+
+/*Menu principal*/
+.menu-principal
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 75px;
+    padding: 0 30px;
+    margin-top: 10px;
+    background: var(--color-background);
+    z-index: 1;
+}
+
+.logo img
+{
+    width: 130px;
+    cursor: pointer;
+}
+
+.menu-bar
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.menu-bar .enlaces ul li
+{
+    display: inline-block;
+    padding: 0 10px;
+
+}
+
+.menu-bar .enlaces ul li a
+{
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight:600;
+    background: linear-gradient(currentColor,currentColor);
+    background-position:100% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: all 0.5s;
+}
+.menu-bar .enlaces ul li a:hover
+{
+    color: var(--color-secundario);
+    background-size: 50% 2px;
+
+}
+
+.menu-bar .sociales a
+{
+    font-size: 16px;
+    text-transform: uppercase;
+    padding:0 10px;
+    font-weight: 700;
+    text-decoration: none;
+    color:var(--color-texto);
+    transition: all 0.5s;
+
+}
+
+.menu-bar .sociales a:hover
+{
+    color:var(--color-secundario);
+}
+.menu-principal i
+{
+    cursor: pointer;
+    color: var(--color-texto);
+    font-size: 30px;
+    float: right;
+    transition: all 0.5s;
+    display: none;
+}
+.menu-principal i:hover
+{
+    color: var(--color-secundario);
+}
+
+
+
+
+
+
+/*SLIDER DE PRODUCTOS*/
+#menu-productos .contenedor-principal
+{
+    display:flex;
+    align-items: center;
+    position:relative;
+    z-index: 0;
+}
+.contenedor-principal a{
+    text-decoration: none;
+    color:#fff;
+}
+
+.contenedor-principal #btn-izquierda,
+.contenedor-principal #btn-derecha
+{
+    position: absolute;
+    height: 10%;
+    width: 50px;
+    border:none;
+    background: transparent;
+    cursor :pointer;
+    font-size: 40px;
+    margin:0 15px;
+    color: var(--color-secundario);
+    z-index: 500;
+    outline: none;
+    transition: all 0.3;
+}
+
+.contenedor-principal #btn-izquierda:hover,
+.contenedor-principal #btn-derecha:hover
+{
+    background: var(--color-background-sombra);
+    transform: translateY(5px);
+}
+
+.contenedor-principal #btn-izquierda
+{
+    left: 0;
+}
+
+.contenedor-principal #btn-derecha
+{
+    right: 0;
+}
+
+.slider
+{
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh-80px);
+    scroll-behavior: smooth;
+}
+
+.container-productos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+
+}
+
+.descripcion-productos
+{
+
+    width: 30%;
+
+}
+.descripcion-productos h1
+{
+    font-size: 5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.descripcion-productos h2
+{
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    font-weight: 100;
+}
+
+.descripcion-productos p
+{
+    color: var(--color-texto);
+    font-style: italic;
+    text-align: justify;
+}
+
+.imagen-productos
+{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-productos img
+{   
+    width: 100%;
+    transform: scale(1.1);
+    position: all 0.3s;
+
+}
+
+.container-productos:hover .imagen-productos img
+{
+    transform: scale(1.15);
+    
+}
+
+/*Seccion servicios*/
+
+#servicios
+{
+    height: 100vh;
+    background: #FFF;
+    padding:40px;
+
+}
+
+.servicios-titulos
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.servicios-container
+{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,auto);
+    grid-gap: 30px;
+    grid-template-areas:"ingredientes   imagen      rapidez"
+                        "calidad        imagen      delivery";
+
+}
+
+.calidad
+{
+    grid-row: calidad;
+    grid-column: calidad;
+}
+
+.ingredientes
+{
+    grid-row: ingredientes;
+    grid-column: ingredientes;
+}
+
+.rapidez
+{
+    grid-row: rapidez;
+    grid-column: rapidez;
+
+}
+
+.delivery
+{
+    grid-row: delivery;
+    grid-column: delivery;
+
+}
+
+.imagen-central
+{
+    grid-row: imagen;
+    grid-column: imagen;
+    transition: all 0.5s;
+
+}
+
+.imagen-central:hover
+{
+    transform: scale(1.1);
+}
+
+.items
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items span
+{
+    width: 95px;
+    font-size: 40px;
+    color: var(--color-secundario);
+    padding: 20px;
+    border: 5px double #dedede;
+    border-radius: 50%;
+    transition: all 0.5s;
+    
+    
+
+}
+
+.items span:hover
+{
+    background: var(--color-secundario);
+    color:#FFF;
+}
+
+.ingredientes span,
+.calidad span
+{
+    color:var(--color-primario);
+
+}
+
+.ingredientes span:hover,
+.calidad span:hover
+{
+    background: var(--color-primario);
+    color:#FFF;
+    
+}
+
+.items .titulos-item
+{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.items .texto-item
+{
+    font-size: 14px;
+    color: var(--color-texto);
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px;
+}
+
+/*Seccion de equipo*/
+
+#equipo
+{
+    height: 100vh;
+    display: flex;
+}
+.persona
+{
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s;
+
+
+}
+
+.persona:hover
+{
+    flex-grow: 3;
+    
+}
+.persona-imagen
+{
+    
+    height: 100%;
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+    filter: grayscale(80%);
+    
+    
+
+}
+
+.persona:hover .persona-imagen/*cuando yo haga hover a mi imagen, hare que .persona-imagen recupere color*/
+{
+    filter: grayscale(0%);
+}
+
+.persona-info
+{
+    position: absolute;
+     bottom: 10px;
+     width: 100%;
+     text-align: center;
+     opacity: 0;
+     transition: all 0.1s;
+     
+
+}
+
+.persona:hover .persona-info
+{
+    opacity: 1;
+    bottom: 60px;
+    transition-delay: 0.3s;
+}
+
+.persona-info h2 
+{
+    font-size: 30px;
+    color: #000;
+    font-weight: 600;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+
+
+}
+
+
+
+.persona-info p
+{
+    color: var(--color-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
+
+
+}
+.social-media a
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    background: var(--color-secundario) ;
+    line-height: 40px;
+    border-radius: 50%;
+    margin:0 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.social-media a:hover/*al pasar el cursor en las redes sociales se cambiara el fondo a transparente*/
+{
+    color: var(--color-secundario);
+    background: transparent;
+    transform: scale(2);/*efecto sobre la red social*/
+}
+
+/*SeccionContacto*/
+
+#contacto
+{
+    height: 100vh;
+    padding :60px;
+    position: relative;
+   background-image: url("../img/so-white.png");
+   background-color: #fff;
+   
+}
+
+
+
+#formulario
+{
+    width: 70%;
+    margin:50px auto;
+}
+
+.two-fiels
+{
+    display: flex;
+   /* justify-content: space-between;*/
+}
+
+.input-text, .input-email, .textarea
+{
+    border:1px solid #b4b4b4;
+    color:#888;
+    background-color: #fff;
+    outline:none;/*Quitar borde de las cajas de texto*/
+    padding:15px 60px;
+    height: 45px;
+    font-size: 16px;
+    margin-bottom: 20px;/*separar cajas de texto*/
+    transition: all 0.5s;
+
+}
+
+.textarea
+{
+    width: 100%;
+    height: auto;
+    resize: none;
+}
+
+.input-text,.input-email
+{
+    width: 100%;
+}
+
+.inputConIcon
+{
+    position: relative;/*para posicionar los elementos de este contenedor con position absolute*/
+    width: 100%;
+    
+}
+
+.inputConIcon i
+{
+    position: absolute;
+    left:0;
+    padding:14px 15px;
+    background:#888;
+    color: #fff;
+    transition: all 1s;
+
+}
+
+.textareaIcon
+{
+    width: 100%;
+    
+    
+
+}
+
+.textareaIcon i{
+    background: transparent;
+    color: #888;
+    padding: 0;
+    font-size: 25px;
+    left: 17px;
+    top:13px;
+    transition: all 1s;
+}
+
+.inputConIcon input:focus, 
+.inputConIcon textarea:focus
+{
+    border:1px solid var(--color-primario);
+}
+
+.inputConIcon input:focus + i /*El simbolo mas quiere decir que a los iconos tambien se le añadira la funcion de focus*/
+{
+    background: var(--color-primario);
+}
+
+.inputConIcon textarea:focus + i
+{
+    color: var(--color-primario);
+}
+
+.fiels-btn
+{
+    width:100%;
+    display: flex;
+    justify-content:flex-end;/*para que se coloque alfinal*/
+}
+
+
+/*MEDIA QUERY*/
+
+@media screen and (max-width:850px)
+{
+    /*SLIDER DE PRODUCTOS*/
+    .container-productos
+    {
+        flex-direction: column;
+
+    }
+    .descripcion-productos
+    {
+        width: 70%;/*porcentaje en base al media query*/
+        order: 1;/*cambia el orden*/
+
+
+    }
+   .descripcion-productos .btn
+   {
+       padding: 10px 20px;
+   }
+   .descripcion-productos .btn:hover
+   {
+       padding: 10px 30px;
+   }
+   /*Seccion servicios  */
+   .servicios-container
+   {
+        margin-top: 50px;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "ingredientes  rapidez"
+                              "calidad      delivery";
+   }
+
+   .imagen-central
+   {
+       display: none;
+   }
+}
+@media screen and (max-width:650px )/*Como condicional, cuando la pantalla llegue a "x" pixels has esto*/
+ {
+    .menu-principal
+    {
+        position: fixed;
+        top: 0;
+        margin-top:0;
+
+    }
+    .menu-principal i
+    {
+        display: block;/*Al momento que la pantalla llegue a 650 pixels, muestrame las flechas del menu bar*/
+    }
+    .menu-bar
+    {
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+        background: #333;
+        transition:all 1s;
+        transform: translateX(100%);
+
+
+    }
+
+    .menu-bar.active /*tener cuidado con poner varias clases, los puntos siembre van juntos*/
+    {
+        transform: translateX(0%);
+    }
+
+    
+
+    .menu-bar .enlaces ul li
+    {
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+
+    }
+    .menu-bar i
+    {
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+    .menu-bar .enlaces ul li a,
+    .menu-bar .sociales a
+    {
+        font-size: 20px;
+    }
+
+    /*SLIDER PRODUCTOS*/
+    .slider
+    {
+        height: calc(100vh-0px);
+    }
+    .imagen-productos
+    {
+        width: 65%;
+    }
+
+    .descripcion-productos h1
+    {
+        font-size: 7vw;
+    }
+    .descripcion-productos h1
+    {
+        font-size: 3vw;
+    }
+
+    /*Contacto*/
+
+    #formulario
+    {
+        width: 100%;
+    }
+
+    .two-fiels
+    {
+        flex-direction: column; /*aparecera uno arriba de otro */
+
+    }
+    .inputConIcon
+    {
+        width: 100%;
+    }
+
+}
